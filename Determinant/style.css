@@ -1,0 +1,133 @@
+:root {
+    --body-color: gray;
+    --highlight-color: white;
+    --selected-color: #CD5C5C;
+    --warning-color: red;
+}
+
+* {
+    font-family: FontFabricBold;
+}
+
+@font-face {
+    font-family: FontFabricBold;
+    src: url(fonts/fontfabricbold.otf);
+}
+@font-face {
+    font-family: Ubuntu;
+    src: url(fonts/Ubuntu-Regular.ttf);
+}
+
+/*GENERAL*/
+
+.main-content {
+    width: 500px;
+    height: 100vh;
+    margin: auto;
+    display: table;
+}
+.heading {
+    text-align: center;
+    margin: auto;
+}
+
+.step-display-words, .step-display-math {
+    margin: 10px auto 10px auto;
+    width: 500px;
+    height: fit-content;
+    text-align: center;
+}
+
+.next-step-button {
+    width: 100px;
+    margin: 10px auto 10px auto;
+    text-align: center;
+    border-radius: 4px;
+    padding: 7px 5px;
+    background-color: var(--body-color);
+    cursor: pointer;
+}
+
+/*DETERMINANT*/
+.determinant-container {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.determinant-grid {
+    background: var(--body-color);
+    height: 100%;
+    width: 100%;
+    border-radius: 35px;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: auto auto auto;
+}
+.determinant-grid-item {
+    background-color: var(--highlight-color);
+    border: 1px var(--body-color);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    transition: background 1s;
+}
+
+.determinant-grid-item span {
+    margin: auto;
+    font-size: 75px;
+}
+
+/*INPUT*/
+
+.input-container {
+    vertical-align: middle;
+}
+
+.input-grid {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: 77px 77px 77px;
+}
+
+.input-grid-item {
+    text-align: center;
+    font-size: 30px;
+}
+.input-msg, .info-msg {
+    margin: 20px auto 20px auto;
+    text-align: center;
+}
+
+.fadeout {
+    animation: fadeout 1s;
+}
+
+.fadein {
+    animation: fadein 1s;
+}
+
+@keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadeout { 
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+
